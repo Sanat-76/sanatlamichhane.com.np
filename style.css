@@ -389,7 +389,7 @@ ul {
 /* Cards / Research */
 .cards-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
 }
 
@@ -428,7 +428,7 @@ ul {
 /* Projects */
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
 }
 
@@ -557,7 +557,19 @@ ul {
 /* Mobile Responsive */
 @media (max-width: 768px) {
     .hero h1 {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
+    }
+
+    .hero .subtitle {
+        font-size: 1.2rem;
+    }
+
+    .section {
+        padding: 4rem 0;
+    }
+
+    .section-title {
+        font-size: 2rem;
     }
 
     .hero-content {
@@ -576,7 +588,16 @@ ul {
     }
 
     .hero-buttons {
-        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .hero-buttons .btn-primary,
+    .hero-buttons .btn-outline {
+        width: 100%;
+        text-align: center;
     }
 
     .bio-short {
@@ -609,5 +630,18 @@ ul {
         background: white;
         padding: 2rem;
         box-shadow: var(--shadow);
+        border-top: 1px solid var(--color-border);
+        gap: 1.5rem;
+        text-align: center;
+    }
+
+    .nav-list.active li {
+        width: 100%;
+    }
+
+    .nav-list.active a {
+        display: block;
+        padding: 0.5rem 0;
+        font-size: 1.1rem;
     }
 }
